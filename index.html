@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Primary Meta Tags -->
+    <title>MMEx </title>
+    <meta name="title" content="MMEx ">
+    <meta name="description" content="That can calculate national exchange currency..">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="MMEx ">
+    <meta property="og:description" content="That can calculate national exchange currency..">
+    <meta property="og:image" content="Image/profile%20logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="MMEx ">
+    <meta property="twitter:description" content="That can calculate national exchange currency..">
+    <meta property="twitter:image" content="Image/profile%20logo.png">
+
+    <!--That is Bootstrap-->
+    <link rel="stylesheet" href="./Style/style.css">
+
+    <!--For Animation-->
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
+
+    <!--fontAwaSome-->
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <!--that is icon-->
+    <link rel="shortcut icon" href="./Logo.png" type="image/x-icon">
+
+    <title>MMEx</title>
+</head>
+<body>
+<div class="container position-relative">
+    <div class="row justify-content-center py-2 my-0 py-lg-5 my-lg-3 ">
+        <div class="col-12 col-lg-6">
+            <div class="row justify-content-center my-0 my-lg-5">
+
+                <div class="col-12 col-lg-9 animate__animated animate__fadeInDown">
+                    <div>
+                        <img src="./Logo.png" class="logo" alt="">
+                        <p class="d-inline-block align-middle text-secondary h1 mb-0 ms-2 fw-bold" >MMEx</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 animate__animated animate__fadeInDown">
+                    <h1 class="fw-bold text-secondary display-4 float-end " id="res">00.0</h1>
+                </div>
+
+                <div class="animate__animated animate__fadeInDown">
+                    <hr class="border-0 bar">
+                </div>
+
+                <div class="col-12">
+                    <div class="row align-items-center needs-validation">
+                        <div class="col-12 col-lg-3 position-relative mb-3 mb-lg-0">
+                            <label for="number" class="form-label text-secondary fs-2 fw-bold">Input</label>
+                            <input id="number" type="number" class="form-control text-end" placeholder="0.00" autofocus>
+                            <small class="invalid-tooltip position-absolute">that is no valid number</small>
+                        </div>
+                        <div class="col col-lg-3 mb-3 mb-lg-0 position-relative">
+                            <label for="number" class="form-label text-secondary fs-2 fw-bold">From</label>
+                            <select name="from" id="form" class="form-select select">
+                                <option value="0" disabled selected>Select your option</option>
+                            </select>
+                            <small class="invalid-tooltip position-absolute">that is no valid</small>
+                        </div>
+                        <div class="col col-lg-3 mb-3 mb-lg-0">
+                            <label for="number" class="form-label text-secondary fs-2 fw-bold">To</label>
+                            <select name="to" id="to" class="form-select select">
+
+                            </select>
+                        </div>
+
+                        <div class="col-12 col-lg-3 align-self-end mt-3 mt-lg-0 h-100">
+                            <button id="calc" class="btn w-100 btn-outline-secondary btn-lg">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 my-5 d-none animate__animated animate__fadeInDown" id="motherOfTable">
+                    <table class="table table-bordered table-responsive table-hover">
+                        <thead>
+                            <tr class="table-primary" id="tableCheck">
+                                <th class="fs-2 text-secondary">Date</th>
+                                <th class="fs-2 text-secondary">Form</th>
+                                <th class="fs-2 text-secondary">To</th>
+                                <th class="fs-2 text-secondary text-end">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table">
+
+                        </tbody>
+                    </table>
+
+                    <button class="btn btn-outline-secondary btn-lg w-100" id="clear">clear record</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="position-absolute switchContainer animate__animated animate__fadeInRight">
+        <label class="switch">
+            <input type="checkbox" class="input" id="switcher">
+            <div class="rail">
+                <span class="circle"></span>
+            </div>
+            <!--<span class="indicator"></span>-->
+            <i class="fas fa-moon ms-2" id="indicator"></i>
+        </label>
+    </div>
+</div>
+
+<!--for Currency Data-->
+<script type="module" src="./Script/data.js"></script>
+
+<!--for loop -->
+<script type="module" src="./Script/nationalData.js"></script>
+
+<script type="module" src="./Script/looping.js"></script>
+
+<!--for application-->
+<script type="module" src="./Script/app.js"></script>
+
+</body>
+</html>
