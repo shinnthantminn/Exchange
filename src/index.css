@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply py-6 flex w-full justify-between items-center font-bold text-gray-500 border-b-4 border-gray-300;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+th,
+td {
+  @apply border-2;
+}
+
+.btn 
+{
+  @apply border border-gray-400 px-7 py-2 text-gray-500  duration-500 rounded hover:text-white hover:bg-gray-500 hover:shadow-2xl active:shadow-[rgba(0,_0,_0,_0.35)_0px_5px_15px;]
+}
