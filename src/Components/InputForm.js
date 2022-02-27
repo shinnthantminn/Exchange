@@ -14,7 +14,7 @@ function InputForm({ text }) {
   }, [context.condi])
 
   return (
-    <div>
+    <div className="w-full sm:w-fit">
       <label
         className="text-4xl font-bold text-gray-500 block mb-2"
         htmlFor="input"
@@ -25,7 +25,7 @@ function InputForm({ text }) {
         value={value}
         type="number"
         autoComplete="off"
-        className=" border pr-2 border-gray-500 py-1 appearance-none rounded outline-0 duration-500 focus:shadow-3xl text-right"
+        className="w-full border pr-2 border-gray-500 py-1 appearance-none rounded outline-0 duration-500 focus:shadow-3xl text-right"
         placeholder="0.00"
         name="input"
         id="input"

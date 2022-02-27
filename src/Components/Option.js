@@ -16,7 +16,7 @@ function Option({ text, value, price }) {
   }, [seter.condi])
 
   return (
-    <div>
+    <div className="sm:mr-0 mt-5 sm:mt-0">
       <label
         htmlFor="currency"
         className="text-4xl font-bold text-gray-500 block mb-2"
@@ -35,7 +35,7 @@ function Option({ text, value, price }) {
         }}
         name="currency"
         id="currency"
-        className="appearance-none px-16 py-1 rounded outline-0 duration-500 focus:shadow-3xl border border-black"
+        className="appearance-none px-[35%] py-1 sm:px-16 sm:py-1 rounded outline-0 duration-500 focus:shadow-3xl border border-black"
       >
         <option value="">Select</option>
         {Object.keys(value).map((i, index) => (

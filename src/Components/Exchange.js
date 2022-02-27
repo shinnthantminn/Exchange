@@ -4,7 +4,7 @@ import TableChart from './TableChart'
 
 function Exchange() {
   return (
-    <div className=" w-[50%] mx-auto">
+    <div className=" w-[95%] lg:w-[70%] xl:w-[65%] 2xl:w-[50%] mx-auto">
       <Header />
       <Form />
       <TableChart />

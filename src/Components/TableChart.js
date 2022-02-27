@@ -11,7 +11,7 @@ function TableChart() {
       <div className=" w-full mt-5 text-gray-600">
         <table className="table-auto w-full border-2">
           <thead className=" bg-teal-200 border-b-[2.1px] border-b-black ">
-            <tr className="text-4xl border-2 text-left">
+            <tr className="text-xl sm:text-4xl border-2 text-left">
               <th>Date</th>
               <th>From</th>
               <th>To</th>
@@ -20,7 +20,7 @@ function TableChart() {
           </thead>
           <tbody>
             {arr.map((i, index) => (
-              <tr className="" key={index}>
+              <tr className="text-sm sm:text-xl" key={index}>
                 <td>{i.dataSt}</td>
                 <td>{`${i.y}${i.z}`}</td>
                 <td>{i.a}</td>

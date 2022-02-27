@@ -19,6 +19,26 @@ function App() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    if (tb.length === 0) {
+      return
+    }
+    let res = JSON.stringify(tb)
+    localStorage.setItem('storage', res)
+
+    console.log(res)
+  }, [tb])
+
+  useEffect(() => {
+    if (!localStorage.storage) {
+      return
+    }
+    let get = localStorage.getItem('storage')
+    let res = JSON.parse(get)
+
+    setTb(res)
+  }, [])
+
   const receive = (e) => {
     setPrice(e)
     setCondi(!condi)
@@ -28,11 +48,14 @@ function App() {
     let date = new Date()
     let dataSt = `${date.toLocaleDateString()},${date.toLocaleTimeString()}`
 
-    setTb([...tb, { dataSt, x, y, z, a }])
+    let newTask = { dataSt, x, y, z, a }
+
+    setTb([...tb, newTask])
   }
 
-  const clear = () => {
+  const clear = async () => {
     setTb([])
+    localStorage.clear()
   }
 
   return (

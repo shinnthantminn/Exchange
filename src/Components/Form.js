@@ -36,14 +36,21 @@ function Form() {
 
   return (
     <>
-      <form className="flex justify-between items-center" onSubmit={submiter}>
+      <form
+        className="sm:flex flex-wrap justify-between items-center"
+        onSubmit={submiter}
+      >
         <InputForm text={text} />
 
         <Option text="From" value={adder.cur} price={left} />
 
         <Option text="To" value={adder.cur} price={right} />
 
-        <input type="submit" className="btn mt-11" value="Calculate" />
+        <input
+          type="submit"
+          className="btn mt-11 w-[100%] lg:w-fit"
+          value="Calculate"
+        />
       </form>
     </>
   )
